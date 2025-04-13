@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OKR Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="main_container">
+        <div class="steps_container">
+            <div class="step">
+                <div class="circle">1</div>
+                <span>form1</span>
+            </div>
+            <div class="line" ></div>
+            <div class="step">
+                <div class="circle">2</div>
+                <span>form2</span>
+            </div>
+            <div class="line"></div>
+            <div class="step">
+                <div class="circle">3</div>
+                <span>form3</span>
+            </div>
+        </div>
+
+        <form id="form-1">
+            <label for="name">Name:</label>
+            <input type="text" id="name" class="input1" oninput="temporary()" placeholder="Enter your name"/>
+            <small class="alert1">please fill your name</small>
+
+            <label for="age">Age:</label>
+            <input type="number" id="age" class="input1" min="18" max="60" oninput="temporary()" placeholder="e.g. 25"/>
+            <small class="alert1">please fill your age</small>
+
+            <label for="dob">Date Of Birth</label>
+            <input type="date" id="dob" class="input1" oninput="temporary()">
+            <small class="alert1">please fill your Date Of Birth</small>
+            <label for="fname">Father Name:</label>
+            <input type="text" id="fname" class="input1" oninput="temporary()" placeholder="Enter your Father name"/>
+            <small class="alert1">please fill your Father name</small>
+            <label for="mname">Mother Name:</label>
+            <input type="text" id="mname" class="input1" oninput="temporary()" placeholder="Enter your Mother name"/>
+            <small class="alert1">please fill your mother name</small>
+            <label for="num">Phone Number:</label>
+            <input type="tel" id="num" class="input1" maxlength="10" oninput="temporary()" placeholder=" Enter valid number" pattern="[6-9][0-9]{9}" > 
+            <small class="alert1">please fill your valid mobile number</small>
+            
+            <div class="btn1">
+                <button id="next1" onclick="nextbtn1(event)">Next</button>
+            </div> 
+        </form>
+
+
+        <form id="form-2" class="hide">
+            <h2>Education details</h2>
+            <label for="degree">Degree</label>
+            <input type="text" id="degree" class="input2" oninput="temporary()" placeholder="Ex:B.com" required />
+            <small class="alert2">please fill the Degree input</small>
+            <label for="college">College</label>
+            <input type="text" id="college" class="input2" oninput="temporary()" placeholder="college name" required />
+            <small class="alert2">please fill your College name</small>
+            <label for="course">Course</label>
+            <input type="text" id="course" class="input2" oninput="temporary()" placeholder="Ex:Computer science" required />
+            <small class="alert2">please fill your Course name</small>
+            <div class="btn2">
+                <button id="previous1">previous</button>
+                <button id="next2" onclick="nextbtn2(event)">Next</button>
+            </div> 
+        </form>
+
+
+       <form id="form-3" class="hide">
+        <h2>Id Proof's</h2>
+        <label for="aadhar">Aadhar Number:</label>
+        <input type="text" id="aadhar" class="input3" maxlength="12" oninput="temporary()" placeholder="aadhar number" pattern="[0-9]{12}" >
+        <small class="alert3">please fill your Aadhar Number</small>
+        <label for="pan">PAN Card Number:</label>
+        <input type="text" id="pan" class="input3" oninput="temporary()" pattern="^[A-Z]{5}[0-9]{4}[A-Z]{1}$" maxlength="10" placeholder="pan number "/>
+        <small class="alert3">please fill your PAN Card Number</small>
+        <div class="btn3">
+            <button id="previous2">previous</button>
+            <button id="submit" type="button" onclick="submitbtn(event)">Submit</button>
+        </div>
+       </form>
+
+    </div>
+    <script src="form.js"></script>
+</body>
+</html>
