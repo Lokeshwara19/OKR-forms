@@ -151,6 +151,7 @@ function submitbtn(event){
         alldata.push(totaldata);
         localStorage.setItem('data',JSON.stringify(alldata))||"";
         localStorage.removeItem('temp');
+        location.reload()
     return flag
     
     
